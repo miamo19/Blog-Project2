@@ -40,7 +40,7 @@
           Your comment is awaiting moderation
         </div>
         {% else %}
-        <h3>Leave a comment</h3>
+        <h3>Leave a comment here</h3>
         <form method="post" style="margin-top: 1.3em;">
           {% csrf_token %}
           {{ comment_form | crispy }}
