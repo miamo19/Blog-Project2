@@ -17,4 +17,5 @@ class CommentAdmin(admin.ModelAdmin):
     actions = ['approve_comments']
 
     def approve_comments(self, request, queryset):
+        print(queryset)
         queryset.update(active=True)
