@@ -6,7 +6,10 @@ from django.shortcuts import render, get_object_or_404
 
 
 class PostList(generic.ListView):
-    #classbases view which displaces all the post
+    """ 
+    name: PostList
+    description: This ClassBasedView list out all the Post 
+    """
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 2
@@ -18,6 +21,10 @@ class PostList(generic.ListView):
 
 
 def post_detail(request, slug):
+    """ 
+    name: post_detail
+    description: This functionBasedView will display a specific comment related to a post
+    """
     #functionBased view to displace comment related to details
     template_name = 'post_detail.html'
     post = get_object_or_404(Post, slug=slug)
