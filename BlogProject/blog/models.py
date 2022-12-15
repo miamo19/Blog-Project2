@@ -9,9 +9,9 @@ STATUS = (
 
 class Post(models.Model):
     """
-    Name: Model Post 
-    Description: its stores various Posts for a particular user called Author
-    author: Hyacinth
+    Name: Post 
+    Description: This class stores various Posts for a particular user called Author
+    author: Hyacinthemiamo5@gmail.com
     """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -30,9 +30,9 @@ class Post(models.Model):
     
 class Comment(models.Model):
     """
-    Name: Model Comment 
-    Description: its stores comments for related post by a particular user 
-    author: Hyacinth
+    Name: Comment 
+    Description:This class stores Comments for related Post of a particular user 
+    author: Hyacinthemiamo5@gmail.com
     """
     post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
     name = models.CharField(max_length=80)
