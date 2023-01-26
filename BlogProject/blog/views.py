@@ -19,13 +19,8 @@ class PostList(generic.ListView):
 #     model = Post
 #     template_name = 'post_detail.html'
 
-
+#This functionBasedView will display a specific comment related to a post detail
 def post_detail(request, slug):
-    """ 
-    name: post_detail
-    description: This functionBasedView will display a specific comment related to a post
-    """
-    #functionBased view to displace comment related to details
     template_name = 'post_detail.html'
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True)
