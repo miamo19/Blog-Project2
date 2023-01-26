@@ -1,5 +1,7 @@
-#from Django
+#from project
 from .models import Comment
+
+#from Django
 from django import forms
 
 
