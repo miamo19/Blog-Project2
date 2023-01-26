@@ -1,3 +1,4 @@
+#from django
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -10,7 +11,7 @@ STATUS = (
 class Post(models.Model):
     """
     Name: Post 
-    Description: This class stores various Posts for a particular user called Author
+    Description: This class stores various Posts for a particular Author
     author: Hyacinthemiamo5@gmail.com
     """
     title = models.CharField(max_length=200, unique=True)
@@ -31,7 +32,7 @@ class Post(models.Model):
 class Comment(models.Model):
     """
     Name: Comment 
-    Description:This class stores Comments for related Post of a particular user 
+    Description:This class stores Comments for related Post 
     author: Hyacinthemiamo5@gmail.com
     """
     post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
