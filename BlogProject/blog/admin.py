@@ -9,7 +9,7 @@ from .models import Post, Comment
 
 # admin.site.register(Post, PostAdmin)
 
-#Or the above could be done as below with decorator
+# ++++++👆👆👆👆OR+++++Do👇👇👇👇
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
