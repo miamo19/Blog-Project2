@@ -16,6 +16,10 @@ from .models import Post, Comment
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+    """
+    Name: PostAdmin
+    Description: This class register the model class Post from the models.py file
+    """
     list_display = ('title', 'slug', 'status','created_on')
     list_filter = ("status",)
     search_fields = ['title', 'content']
@@ -26,7 +30,7 @@ class PostAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     """
     Name: CommentAdmin
-    Description: 
+    Description: This class register the model class Comment from the models.py file
     """
     list_display = ('name', 'body', 'post', 'created_on', 'active')
     list_filter = ('active', 'created_on')
