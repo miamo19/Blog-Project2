@@ -1,6 +1,5 @@
 #from django
 from django.contrib import admin
-
 #from project
 from .models import Post, Comment
 
