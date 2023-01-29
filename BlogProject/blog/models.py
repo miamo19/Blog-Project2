@@ -7,7 +7,6 @@ STATUS = (
     (1,'Publish'),
     (0,'Draft')
 )
-
 class Post(models.Model):
     """
     Name: Post 
