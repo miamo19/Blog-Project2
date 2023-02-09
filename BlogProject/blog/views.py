@@ -1,8 +1,8 @@
-#from django
+#From django
 from django.views import generic
 from django.shortcuts import render, get_object_or_404
 
-#from project
+#From project
 from .models import Comment, Post
 from .forms import CommentForm
 
