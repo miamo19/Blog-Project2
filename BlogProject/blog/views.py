@@ -16,7 +16,10 @@ class PostList(generic.ListView):
     paginate_by = 2
 
 # class PostDetail(generic.DetailView):
-#     #classbases view which displaces the detail for each Post
+#     """
+      name: PostDetail
+      description: classbases view which displaces the detail for each Post
+      """
 #     model = Post
 #     template_name = 'post_detail.html'
 
