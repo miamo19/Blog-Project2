@@ -20,7 +20,7 @@ class PostList(generic.ListView):
 #     model = Post
 #     template_name = 'post_detail.html'
 
-#This functionBasedView will display a specific comment related to a post detail
+
 def post_detail(request, slug):
     template_name = 'post_detail.html'
     post = get_object_or_404(Post, slug=slug)
