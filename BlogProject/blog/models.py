@@ -10,7 +10,7 @@ STATUS = (
 class Post(models.Model):
     """
     Name: Post 
-    Description: This class stores various Posts for a particular Author
+    Description: This Class stores various Posts for a particular Author
     author: Hyacinthemiamo5@gmail.com
     """
     title = models.CharField(max_length=200, unique=True)
