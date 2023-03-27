@@ -31,7 +31,7 @@ class Post(models.Model):
 class Comment(models.Model):
     """
     Name: Comment 
-    Description:This class stores Comments for related Post 
+    Description:This Class stores Comments for related Post 
     author: Hyacinthemiamo5@gmail.com
     """
     post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
