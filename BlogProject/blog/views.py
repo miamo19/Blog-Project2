@@ -1,25 +1,19 @@
-#From django
+#From Django
 from django.views import generic
 from django.shortcuts import render, get_object_or_404
 
-#From project
+#From Project
 from .models import Comment, Post
 from .forms import CommentForm
 
 class PostList(generic.ListView):
-    """ 
-    name: PostList
-    description: This ClassBasedView list out all the Post 
-    """
+    """ This ClassBasedView list out all the Post """
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 2
 
 # class PostDetail(generic.DetailView):
-#     """
-      name: PostDetail
-      description: classbases view which displaces the detail for each Post
-      """
+#     """ This Classbases view which displaces the detail for each Post """
 #     model = Post
 #     template_name = 'post_detail.html'
 
