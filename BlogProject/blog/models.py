@@ -10,7 +10,7 @@ STATUS = (
 class Post(models.Model):
     """
     Name: Post 
-    Description: This Class stores various Posts for a particular Author
+    Description: This Class store various Posts for a particular Author
     author: Hyacinthemiamo5@gmail.com
     """
     title = models.CharField(max_length=200, unique=True)
@@ -32,7 +32,7 @@ class Post(models.Model):
 class Comment(models.Model):
     """
     Name: Comment 
-    Description:This Class stores Comments for related Post 
+    Description:This Class store Comments for related Post 
     author: Hyacinthemiamo5@gmail.com
     """
     post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
